@@ -71,6 +71,30 @@ $(".get_data").click(function () {
     });
 });
 
+//Get Designation Data for designation_2
+$(".get_data").click(function () {
+
+    var ID = $(this).attr("data-id");
+    $.ajax({
+        type: "POST",
+        url: baseurl + "index.php/Master/Designation_2/get_designation",
+        data: {'id': ID},
+        dataType: "JSON",
+        success: function (response) {
+//                    alert(response);
+            for (var i = 0; i < response.length; i++) {
+                $('#id').val(response[i].Des_ID);
+                $('#Desig_Name').val(response[i].Desig_Name);
+                $('#Desig_Order').val(response[i].Desig_Order);
+
+            }
+        }
+    });
+});
+
+
+
+
 
 
 function delete_id(id)
