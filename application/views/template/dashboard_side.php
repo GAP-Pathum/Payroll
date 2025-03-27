@@ -379,6 +379,10 @@ $User_Name = $currentUser[0]->Emp_Full_Name;
                                     <li><a href="<?php echo base_url(); ?>Reports/Attendance/Report_Attendance_ATT_Sum">ATTENDANCE SUMMERY</a></li>
                                 <?php endif; ?>
 
+                                <?php if ($currentUser[0]->late_report == 1): ?>
+                                    <li><a href="<?php echo base_url(); ?>Reports/Attendance/Report_Attendance_ATT_All">ATTENDANCE Data</a></li>
+                                <?php endif; ?>
+
                                 <?php if ($currentUser[0]->monthly_summery_report == 2): ?>
                                     <li><a href="form-dropzone.html">MONTHLY SUMMERY</a></li>
                                 <?php endif; ?>

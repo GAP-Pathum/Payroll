@@ -30,7 +30,7 @@ class Designation extends CI_Controller {
      * Insert Data
      */
 
-    public function insert_Designation() {
+    public function insert_Designation(): void {
 
         /*
          * Data array
